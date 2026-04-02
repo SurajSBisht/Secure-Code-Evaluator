@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Coding Assessment System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <div class="container">
+    <header>
+      <h1>Secure Web-Based Coding Assessment</h1>
+      <p>Compiler Phase Validation for Placement Assessments</p>
+      <div class="timer" id="timer">Time Left: 30:00</div>
+    </header>
+
+    <section class="editor-section">
+      <label for="codeInput">Enter Code:</label>
+      <textarea id="codeInput" placeholder="Write your code here...">int a = 5;
+print(a);
+int b = a + 10;</textarea>
+
+      <div class="buttons">
+        <button onclick="loadSampleCode()">Load Sample Code</button>
+        <button onclick="analyzeCode()">Analyze Code</button>
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="card">
+        <h2>Lexical Analysis</h2>
+        <pre id="lexicalOutput">Waiting for analysis...</pre>
+      </div>
+
+      <div class="card">
+        <h2>Syntax Analysis</h2>
+        <pre id="syntaxOutput">Waiting for analysis...</pre>
+      </div>
+
+      <div class="card">
+        <h2>Semantic Analysis</h2>
+        <pre id="semanticOutput">Waiting for analysis...</pre>
+      </div>
+    </section>
+
+    <footer>
+      <p>⚠️ Secure Mode Enabled | Tab switching may be monitored</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
