@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Placement Code Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>C Placement <span>Code Analyzer</span></h1>
+            <p>Lexical, Syntax, and Semantic Analysis in Real-time</p>
+        </header>
+
+        <main class="dashboard">
+            <section class="editor-section panel">
+                <div class="panel-header">
+                    <h2>Source Code</h2>
+                    <button id="analyze-btn" class="primary-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        Analyze Code
+                    </button>
+                </div>
+                <textarea id="code-input" spellcheck="false" placeholder="int main() {&#10;    int a = 10;&#10;    printf(a);&#10;}"></textarea>
+            </section>
+
+            <section class="results-layout">
+                <div class="panel tokens-panel">
+                    <h2>Tokens</h2>
+                    <div id="tokens-output" class="output-container empty">Run analysis to see tokens...</div>
+                </div>
+
+                <div class="panel ast-panel">
+                    <h2>Abstract Syntax Tree</h2>
+                    <div id="ast-output" class="output-container empty">Run analysis to see AST...</div>
+                </div>
+
+                <div class="panel semantic-panel">
+                    <h2>Semantic Errors</h2>
+                    <div id="semantic-output" class="output-container empty">Run analysis to see semantic results...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
